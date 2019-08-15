@@ -10,7 +10,7 @@ public class DesktopExample {
 
     protected List<Criteria> oredCriteria;
 
-    public DesktopExample() {
+    public   DesktopExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
