@@ -364,66 +364,6 @@ public class UsersExample {
             return (Criteria) this;
         }
 
-        public Criteria andIsAdminIsNull() {
-            addCriterion("is_admin is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminIsNotNull() {
-            addCriterion("is_admin is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminEqualTo(Integer value) {
-            addCriterion("is_admin =", value, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminNotEqualTo(Integer value) {
-            addCriterion("is_admin <>", value, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminGreaterThan(Integer value) {
-            addCriterion("is_admin >", value, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminGreaterThanOrEqualTo(Integer value) {
-            addCriterion("is_admin >=", value, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminLessThan(Integer value) {
-            addCriterion("is_admin <", value, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminLessThanOrEqualTo(Integer value) {
-            addCriterion("is_admin <=", value, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminIn(List<Integer> values) {
-            addCriterion("is_admin in", values, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminNotIn(List<Integer> values) {
-            addCriterion("is_admin not in", values, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminBetween(Integer value1, Integer value2) {
-            addCriterion("is_admin between", value1, value2, "isAdmin");
-            return (Criteria) this;
-        }
-
-        public Criteria andIsAdminNotBetween(Integer value1, Integer value2) {
-            addCriterion("is_admin not between", value1, value2, "isAdmin");
-            return (Criteria) this;
-        }
-
         public Criteria andTelIsNull() {
             addCriterion("tel is null");
             return (Criteria) this;
@@ -481,6 +421,206 @@ public class UsersExample {
 
         public Criteria andTelNotBetween(Integer value1, Integer value2) {
             addCriterion("tel not between", value1, value2, "tel");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressIsNull() {
+            addCriterion("address is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressIsNotNull() {
+            addCriterion("address is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressEqualTo(String value) {
+            addCriterion("address =", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressNotEqualTo(String value) {
+            addCriterion("address <>", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressGreaterThan(String value) {
+            addCriterion("address >", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressGreaterThanOrEqualTo(String value) {
+            addCriterion("address >=", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressLessThan(String value) {
+            addCriterion("address <", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressLessThanOrEqualTo(String value) {
+            addCriterion("address <=", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressLike(String value) {
+            addCriterion("address like", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressNotLike(String value) {
+            addCriterion("address not like", value, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressIn(List<String> values) {
+            addCriterion("address in", values, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressNotIn(List<String> values) {
+            addCriterion("address not in", values, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressBetween(String value1, String value2) {
+            addCriterion("address between", value1, value2, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andAddressNotBetween(String value1, String value2) {
+            addCriterion("address not between", value1, value2, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeIsNull() {
+            addCriterion("code is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeIsNotNull() {
+            addCriterion("code is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeEqualTo(String value) {
+            addCriterion("code =", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeNotEqualTo(String value) {
+            addCriterion("code <>", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeGreaterThan(String value) {
+            addCriterion("code >", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeGreaterThanOrEqualTo(String value) {
+            addCriterion("code >=", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeLessThan(String value) {
+            addCriterion("code <", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeLessThanOrEqualTo(String value) {
+            addCriterion("code <=", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeLike(String value) {
+            addCriterion("code like", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeNotLike(String value) {
+            addCriterion("code not like", value, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeIn(List<String> values) {
+            addCriterion("code in", values, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeNotIn(List<String> values) {
+            addCriterion("code not in", values, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeBetween(String value1, String value2) {
+            addCriterion("code between", value1, value2, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeNotBetween(String value1, String value2) {
+            addCriterion("code not between", value1, value2, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminIsNull() {
+            addCriterion("isadmin is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminIsNotNull() {
+            addCriterion("isadmin is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminEqualTo(Integer value) {
+            addCriterion("isadmin =", value, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminNotEqualTo(Integer value) {
+            addCriterion("isadmin <>", value, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminGreaterThan(Integer value) {
+            addCriterion("isadmin >", value, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminGreaterThanOrEqualTo(Integer value) {
+            addCriterion("isadmin >=", value, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminLessThan(Integer value) {
+            addCriterion("isadmin <", value, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminLessThanOrEqualTo(Integer value) {
+            addCriterion("isadmin <=", value, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminIn(List<Integer> values) {
+            addCriterion("isadmin in", values, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminNotIn(List<Integer> values) {
+            addCriterion("isadmin not in", values, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminBetween(Integer value1, Integer value2) {
+            addCriterion("isadmin between", value1, value2, "isadmin");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsadminNotBetween(Integer value1, Integer value2) {
+            addCriterion("isadmin not between", value1, value2, "isadmin");
             return (Criteria) this;
         }
     }

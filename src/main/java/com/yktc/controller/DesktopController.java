@@ -25,7 +25,7 @@ public class DesktopController {
 	private DesktopService desktopService;
 
 
-
+	//未审核
 	@RequestMapping("/getDesktopByNoState")
 	public Map<String,Object> getDesktopByNoState(Integer page,Integer rows){
 		PageInfo<DesktopExt> pageInfo = desktopService.getDesktopByState(page,rows, 0);
@@ -35,33 +35,22 @@ public class DesktopController {
 		return map;
 	}
 
-	//添加
-	@RequestMapping("/saveDesktop")
-	public String saveDesktop(Desktop desktop){
-		int i = desktopService.saveDesktop(desktop);
-		return "{\"result\":" + i + "}";
+	//已审核
+	@RequestMapping("/getDesktopByYesState")
+	public Map<String,Object> getDesktopByYesState(Integer page,Integer rows){
+		PageInfo<DesktopExt> pageInfo = desktopService.getDesktopByState(page,rows, 1);
+		Map<String,Object> map=new HashMap<>();
+		map.put("total",pageInfo.getTotal());
+		map.put("rows",pageInfo.getList());
+		return map;
 	}
 
-
-	//删除多条
-	@RequestMapping("/deleteDesktop")
-	public String deleteDesktop(Integer [] ids){
-		int i = desktopService.deleteDesktop(ids);
-		System.out.println("i = " + i);
-		return "{\"result\":" + i + "}";
+	//通过审核
+	@RequestMapping("/passDesktop")
+	public Map<String,Object> passDesktop(Integer id){
+		int i = desktopService.passDesktop(id); //0就是未审核
+		Map<String,Object> map=new HashMap<>();
+		map.put("result",i);
+		return map;
 	}
-
-
-
-
-
-
-	//修改
-	@RequestMapping("/updateDesktop")
-	public String updateDesktop(Desktop desktop){
-		int i = desktopService.updateByPrimaryKeySelective(desktop);
-		System.out.println("i = " + i);
-		return "{\"result\":" + i + "}";
-	}
-
 }

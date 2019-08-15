@@ -21,7 +21,6 @@ public interface DesktopMapper {
 
     int updateByPrimaryKey(Desktop record);
 
-    int deleteDesktop(Integer[] ids);
 
     List<DesktopExt> getDesktopByState(Integer state);
 }

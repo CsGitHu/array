@@ -14,15 +14,6 @@ import com.yktc.entity.DesktopExt;
  * @Description:
  */
 public interface DesktopService {
-	//添加
-	int saveDesktop(Desktop desktop);
-
-	//删除多条
-	int deleteDesktop(Integer[] ids);
-
-	//修改
-	int updateByPrimaryKeySelective(Desktop record);
-
 	//未审核
 	PageInfo<DesktopExt> getDesktopByState(Integer page,Integer rows,Integer ispass);
 

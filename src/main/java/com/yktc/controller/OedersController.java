@@ -22,9 +22,7 @@ public class OedersController {
 
 	@RequestMapping("saveOeder")
 	public String saveOeder(Oeders oeders){
-		System.out.println("oeders = " + oeders);
 		int insert = oedersService.insertSelective(oeders);
-		System.out.println("insert = " + insert);
 		return "{\"result\":" + insert + "}";
 	}
 }

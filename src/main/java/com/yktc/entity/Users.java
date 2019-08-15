@@ -9,9 +9,13 @@ public class Users {
 
     private Integer card;
 
-    private Integer isAdmin;
-
     private Integer tel;
+
+    private String address;
+
+    private String code;
+
+    private Integer isadmin;
 
     public Integer getId() {
         return id;
@@ -45,19 +49,35 @@ public class Users {
         this.card = card;
     }
 
-    public Integer getIsAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(Integer isAdmin) {
-        this.isAdmin = isAdmin;
-    }
-
     public Integer getTel() {
         return tel;
     }
 
     public void setTel(Integer tel) {
         this.tel = tel;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code == null ? null : code.trim();
+    }
+
+    public Integer getIsadmin() {
+        return isadmin;
+    }
+
+    public void setIsadmin(Integer isadmin) {
+        this.isadmin = isadmin;
     }
 }

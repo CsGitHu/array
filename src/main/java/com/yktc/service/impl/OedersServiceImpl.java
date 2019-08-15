@@ -28,10 +28,6 @@ public class OedersServiceImpl implements OedersService {
 
 	@Override
 	public int insertSelective(Oeders record) {
-		/*Random random = new Random();
-		int nextInt = random.nextInt();
-		String str = String.valueOf(nextInt).replace("-", "").substring(0, 5);
-		record.setCode(str);*/
 		return oedersMapper.insertSelective(record);
 	}
 

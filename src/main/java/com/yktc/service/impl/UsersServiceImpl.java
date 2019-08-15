@@ -1,6 +1,9 @@
 package com.yktc.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.yktc.entity.Users;
+import com.yktc.entity.UsersCondition;
 import com.yktc.entity.UsersExample;
 import com.yktc.mapper.UsersMapper;
 import com.yktc.service.UsersService;
@@ -22,12 +25,21 @@ public class UsersServiceImpl implements UsersService {
 	@Autowired
 	private UsersMapper usersMapper;
 
+
 	@Override
-	public List<Users> getUsersAll() {
+	public PageInfo<Users> selectPageAll(UsersCondition Condition) {
+		PageHelper.startPage(Condition.getPage(),Condition.getRows());
 		UsersExample usersExample=new UsersExample();
 		UsersExample.Criteria criteria = usersExample.createCriteria();
-		criteria.andIsAdminEqualTo(new Integer(0));//表示管理员
+		criteria.andIsadminEqualTo(0);// 1 表示管理员
+		//添加查询条件
+		if(Condition.getUsername() !=null){
+			criteria.andUsernameLike(Condition.getUsername());
+		}
+		if(Condition.getCode() !=null){
+			criteria.andCodeLike("%"+Condition.getCode()+"%");
+		}
 		List<Users> usersList = usersMapper.selectByExample(usersExample);
-		return usersList;
+		return new PageInfo<>(usersList);
 	}
 }

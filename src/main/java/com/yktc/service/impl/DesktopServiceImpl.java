@@ -29,25 +29,6 @@ public class DesktopServiceImpl implements DesktopService {
 
 
 	@Override
-	@Transactional
-	public int saveDesktop(Desktop desktop) {
-
-		return desktopMapper.insertSelective(desktop);
-	}
-
-	@Override
-	public int deleteDesktop(Integer[] ids) {
-		return 0;
-	}
-
-
-	@Transactional
-	@Override
-	public int updateByPrimaryKeySelective(Desktop record) {
-		return desktopMapper.updateByPrimaryKeySelective(record);
-	}
-
-	@Override
 	public PageInfo<DesktopExt> getDesktopByState(Integer page,Integer rows, Integer ispass) {
 		PageHelper.startPage(page,rows);
 		List<DesktopExt> list = desktopMapper.getDesktopByState(ispass);
